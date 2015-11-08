@@ -1,0 +1,30 @@
+Tant qu'il reste des caractères:
+    Extraire token
+    Si donnée:
+        Mettre donnée sur la pile de données
+    Sinon, si une variable:
+        Mettre la valeur de la variable sur la pile de données
+    Sinon, si appel de fonction:
+        Résoudre et mettre le résultat sur la pile de données (Préciser comment)
+    Sinon, si c'est une parenthèse ouvrante:
+        Mettre la parenthèse sur la pile d'opérateurs
+    Sinon, si c'est une parenthèse fermante:
+        Évaluer les opérateurs sur la pile tant que ce n'est pas une parenthèse ouvrante
+        Enlever la parenthèse ouvrante
+    Sinon (C'est un opérateur):
+        Tant que la priorité de l'opérateur est plus grande que celle sur le dessus de la pile d'opérateurs:
+            Évaluer l'opérateur sur le dessus de la pile et mettre sur le dessus de la pile de données
+        Mettre l'opérateur courant sur le dessus de la pile d'opérateurs
+Résoudre les opérateurs restants dans la pile d'opérateurs
+
+#Données:
+{
+    "type: type_de_la_donnée(num, string, bool, method, ...),
+    "valeur": valeur_de_la_donnée(23,"blabla", true, ma_methode, ...)
+}
+
+#Opérateurs:
+{
+    "symbol": symbol(+,-,*,/,...),
+    "method": nom de la méthode à appeler,
+}
